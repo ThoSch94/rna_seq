@@ -5,6 +5,7 @@
 
 
 # pull docker image from docker hub
+cd /data/users/tschiller/RNA_seq
 mkdir container_image
 cd container_image
 FILE=rna-seq_latest.sif
