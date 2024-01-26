@@ -9,10 +9,10 @@
 #    mv $file ./original_data/$new_filename
 #done
 #
-#cd /data/users/tschiller/RNA_seq/exercise_data/actual_data
+#cd /data/users/tschiller/RNA_seq/processed_data/actual_data
 #mkdir original_data
 #cp *.fastq.gz original_data
-cd /data/users/tschiller/RNA_seq/exercise_data/actual_data
+cd /data/users/tschiller/RNA_seq/processed_data/actual_data
 for x in $(ls -d *.fastq.gz); do echo ${x}; \
 cutadapt \
 -j 4 \

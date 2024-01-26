@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#srun --cpus-per-task=1  --mem-per-cpu=1000M --time=04:05:00 --pty bash
+# srun -p pibu_el8 --cpus-per-task=4  --mem-per-cpu=2000M --time=04:05:00 --pty bash
 
 
 
