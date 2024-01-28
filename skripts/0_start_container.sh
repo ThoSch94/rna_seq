@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# srun -p pibu_el8 --cpus-per-task=4  --mem-per-cpu=2000M --time=04:05:00 --pty bash
+# srun -p pibu_el8 --cpus-per-task=8  --mem-per-cpu=2000M --time=04:05:00 --pty bash
 
 
 
@@ -15,7 +15,7 @@ fi
 
 apptainer pull docker://thoschiller/rna-seq
 # cd /data/users/tschiller/RNA_seq/container_image
-apptainer run rna-seq_latest.sif 
+apptainer run /data/users/tschiller/RNA_seq/container_image/rna-seq_latest.sif 
 
 export APPTAINER_TMPDIR="$SCRATCH" 
 
