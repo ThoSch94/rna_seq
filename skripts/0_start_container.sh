@@ -16,7 +16,3 @@ fi
 apptainer pull docker://thoschiller/rna-seq
 # cd /data/users/tschiller/RNA_seq/container_image
 apptainer run /data/users/tschiller/RNA_seq/container_image/rna-seq_latest.sif 
-
-export APPTAINER_TMPDIR="$SCRATCH" 
-
-

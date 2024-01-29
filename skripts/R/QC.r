@@ -15,7 +15,7 @@ library(RiboseQC)
 
 # Prepare genome file (to be done only once!!!)
 prepare_annotation_files(annotation_directory = "/path/of/Human/Genome/",
-                         twobit_file = "/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/GRCh38.dna.primary_assembly.2bit",
+                         twobit_file = "/data/users/tschiller/RNA_seq/processed_data/GRCh38.dna.primary_assembly.2bit",
                          gtf_file = "/data/users/tschiller/RNA_seq/Raw_data/annotation/DNA_annotation/Homo_sapiens.GRCh38.110.gtf",
                          scientific_name = "Homo.sapiens",
                          annotation_name = "GRCh38",
