@@ -6,6 +6,7 @@ library(pheatmap)
 library(BiocParallel)
 library(org.Hs.eg.db)
 register(MulticoreParam(4)) # Change this based on your computer core count
+setwd("/data/users/tschiller/RNA_seq/processed_data")
 
 # Setting up color profiles from colorbrewer
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
@@ -41,7 +42,7 @@ samples_df$condition <- factor(rep(c(rep(sample_1, no_of_reps),
                                      rep(sample_2, no_of_reps))))
 
 
-featurecount_data <- read.table("/data/users/tschiller/RNA_seq/processed_data/featureCounts/CDS_counts_processed.txt", header = TRUE, row.names = 1)
+featurecount_data <- read.table("/data/users/tschiller/RNA_seq/processed_data/CDS_counts_processed.txt", header = TRUE, row.names = 1)
 
 # Reorder to make the order consistent with samples$run
 featurecount_data <- featurecount_data[ , c(3, 4, 1, 2)]

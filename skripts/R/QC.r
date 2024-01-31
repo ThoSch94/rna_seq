@@ -12,9 +12,9 @@ library("devtools")
 
 # Load the package
 library(RiboseQC)
-
+setwd("/data/users/tschiller/RNA_seq/processed_data")
 # Prepare genome file (to be done only once!!!)
-prepare_annotation_files(annotation_directory = "/path/of/Human/Genome/",
+prepare_annotation_files(annotation_directory = "/data/users/tschiller/RNA_seq/processed_data",
                          twobit_file = "/data/users/tschiller/RNA_seq/processed_data/GRCh38.dna.primary_assembly.2bit",
                          gtf_file = "/data/users/tschiller/RNA_seq/Raw_data/annotation/DNA_annotation/Homo_sapiens.GRCh38.110.gtf",
                          scientific_name = "Homo.sapiens",
@@ -26,10 +26,10 @@ prepare_annotation_files(annotation_directory = "/path/of/Human/Genome/",
 
 # Genome mapped sorted-BAM files
 
-genome_bam <- c("/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_WT_Rep2_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam"
-                "/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_WT_Rep1_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam"
+genome_bam <- c("/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_WT_Rep1_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam",
+                "/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_WT_Rep2_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam",
                 "/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_KO_Rep1_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam",
-                "/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_KO_Rep2_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam",
+                "/data/users/tschiller/RNA_seq/processed_data/mapping_unwanted_rna/RPF_KO_Rep2_clpd_tr.fastq.gz_no_r_t_sno_sn_RNA_GRCh38_sorted.bam"
 )
 
 load_annotation("/path/of/Homo_sapiens.GRCh38.108.gtf_Rannot")

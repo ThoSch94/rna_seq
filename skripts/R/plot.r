@@ -4,12 +4,12 @@
 library(ggplot2)
 library(RColorBrewer)
 library(dplyr)
-
+setwd("/data/users/tschiller/RNA_seq/processed_data")
 # # From https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 Color = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
 
-data <- read.table(file = "/data/users/tschiller/RNA_seq/processed_data/featureCounts/biotype_counts_processed.txt", sep = "\t", header = TRUE)
+data <- read.table(file = "/data/users/tschiller/RNA_seq/processed_data/biotype_counts_processed.txt", sep = "\t", header = TRUE)
 
 # Rearrange data so that it matches the next step
 data <- data[ , c(1, 4, 5, 2, 3)]

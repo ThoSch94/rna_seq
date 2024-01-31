@@ -6,7 +6,7 @@ library(AnnotationDbi)
 library(clusterProfiler)
 library(topGO)
 library(ggplot2)
-
+setwd("/data/users/tschiller/RNA_seq/processed_data")
 sample_name = "RPF_KO_vs_WT"
 
 ## Load DESeq2 output file.
